@@ -74,9 +74,14 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Text(
+        child: Container(
+          width: 200.0,
+          child: Text(
             "Willkommen bei Studios in Motion. Deinem Berater für die neustens Trends",
-            style: TextStyle(fontWeight: FontWeight.w900)),
+            style: TextStyle(fontWeight: FontWeight.w900),
+            textAlign: TextAlign.right,
+          ),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
