@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'SimTo APP'),
     );
@@ -75,12 +75,24 @@ class _MyHomePageState extends State<MyHomePage> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Container(
-          width: 200.0,
-          child: Text(
-            "Willkommen bei Studios in Motion. Deinem Berater für die neustens Trends",
-            style: TextStyle(fontWeight: FontWeight.w900),
-            textAlign: TextAlign.right,
+          child: Row(
+            children: <Widget>[
+              new Text("Hello world",
+                  style: new TextStyle(color: Colors.pink, fontSize: 28.0)),
+              new Padding(
+                //padding: EdgeInsets.all(20.0),
+                padding: EdgeInsets.fromLTRB(20.0, 0.0, 90.0, 0.0),
+                child: new Text("WOW"),
+              ),
+              new Text("End"),
+            ],
           ),
+
+          /* child: Image(
+               width: 250.0,
+                image: NetworkImage(
+                  "https://www.studios-in-motion.de/fileadmin/templates3/images/logo_big.png")),
+             */
         ),
       ),
       floatingActionButton: FloatingActionButton(
