@@ -74,24 +74,19 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Container(
-          child: Row(
-            children: <Widget>[
-              new Text("Hello world",
-                  style: new TextStyle(color: Colors.pink, fontSize: 28.0)),
-              new Padding(
-                //padding: EdgeInsets.all(20.0),
-                padding: EdgeInsets.fromLTRB(20.0, 0.0, 90.0, 0.0),
-                child: new Text("WOW"),
-              ),
-              new Text("End"),
-            ],
-          ),
+        child: Column(
+          children: <Widget>[
+            new AspectRatio(
+                aspectRatio: 4 / 3,
+                child: new Image(
+                    image: NetworkImage(
+                        "https://www.studios-in-motion.de/fileadmin/templates3/images/logo_big.png"))),
+            new Text("Hello World")
+          ],
 
           /* child: Image(
                width: 250.0,
-                image: NetworkImage(
-                  "https://www.studios-in-motion.de/fileadmin/templates3/images/logo_big.png")),
+                )),
              */
         ),
       ),
